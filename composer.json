@@ -1,0 +1,53 @@
+{
+    "name": "mozilla/takebacktheweb",
+    "require": {
+        "php": ">=5.4.0",
+        "WordPress/WordPress": "*",
+        "wpackagist-plugin/advanced-custom-fields": "4.4.5",
+        "wpackagist-plugin/advanced-custom-fields-field-snitch": "*",
+        "wpackagist-plugin/acf-pro-sync": "1.0.1",
+        "wpackagist-plugin/debug-bar": "0.8.2",
+        "wpackagist-plugin/debug-bar-timber": "0.3",
+        "wpackagist-plugin/timber-library": "0.22.4",
+        "wpackagist-plugin/wordpress-seo": "3.0.7",
+        "wpackagist-plugin/wp-super-cache": "1.4.7",
+        "roots/soil": "3.0.3"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "WordPress/WordPress",
+                "type": "webroot",
+                "version": "4.2.1",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.2.1.zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "~1.1"
+                }
+            }
+        }
+    ],
+    "extra": {
+        "webroot-dir": "wp",
+        "webroot-package": "WordPress/WordPress",
+        "installer-paths": {
+            "wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf wp/wp-content/themes/twenty*",
+            "rm -rf wp/wp-config-sample.php",
+            "rm -rf wp/wp-content/plugins/hello.php",
+            "cp -R wp/* .",
+
+            "mkdir -p wp-content/uploads && chmod -R 777 wp-content/uploads",
+            "mkdir -p wp-content/themes/tbtw/acf-json && chmod -R 777 wp-content/themes/tbtw/acf-json"
+        ]
+    }
+}

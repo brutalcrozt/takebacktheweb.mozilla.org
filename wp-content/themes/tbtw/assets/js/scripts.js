@@ -1,0 +1,1 @@
+window.tbtw=window.tbtw||{},jQuery(document).ready(function(){});

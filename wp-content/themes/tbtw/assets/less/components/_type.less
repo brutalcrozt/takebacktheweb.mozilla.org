@@ -1,0 +1,62 @@
+// resources
+//www.mozilla.org/en-US/styleguide/communications/typefaces/
+//www.mozilla.org/en-US/styleguide/websites/sandstone/typefaces/
+
+@font-face{
+    font-family: 'Open Sans Light';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Open Sans Bold';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Open Sans ExtraBold';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Responsive Type
+h1, .h1 { font-size: @font-size-sm-h1; }
+h2, .h2 { font-size: @font-size-sm-h2; }
+h3, .h3 { font-size: @font-size-sm-h3; }
+h4, .h4 { font-size: @font-size-sm-h4; }
+h5, .h5 { font-size: @font-size-sm-h5; }
+h6, .h6 { font-size: @font-size-sm-h6; }
+p { font-size: @font-size-small; }
+
+@media(min-width: @screen-sm) {
+  h1, .h1 { font-size: @font-size-h1; }
+  h2, .h2 { font-size: @font-size-h2; }
+  h3, .h3 { font-size: @font-size-h3; }
+  h4, .h4 { font-size: @font-size-h4; }
+  h5, .h5 { font-size: @font-size-h5; }
+  h6, .h6 { font-size: @font-size-h6; }
+  p { font-size: @font-size-base; }
+}
+
+.container {
+    
+    h4 {
+      font-weight: 500;
+      font-family: @font-family-sans-serif-bold; 
+    }
+    
+
+    
+}
+

@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    {% include "partials/hero-main.twig"%}
+
+    <div class="container">
+
+        <div class="row posts">
+
+            {% for post in posts %}
+                <div class="col-md-8 col-md-offset-2 post news">
+                    {% if post.thumbnail %}
+                        <div class="post--graphic">
+                            <a href="{{post.permalink}}" class="no-hover"> read more
+                            </a>
+                        </div>
+                    {% endif %}
+                    <time>{{post.date|date("F j, Y")}}</time>
+                    <h3><a href="{{post.permalink}}">{{post.title}}</a></h3>
+                    <p>{{post.get_preview(40)}} </p>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        {% include "partials/pagination-archive.twig" %}
+
+    </div>
+
+{% endblock %}

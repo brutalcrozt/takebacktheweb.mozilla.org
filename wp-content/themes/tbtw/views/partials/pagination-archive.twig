@@ -1,0 +1,17 @@
+{% set prev_text = "Newer" %}
+{% set next_text = "Older" %}
+
+<div class="row prev-next">
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <div class="prev">
+            {% if pagination.prev %}
+                <a href="{{ pagination.prev.link }}" class="btn btn-primary btn-block btn-fa btn-left"><i class="fa fa-angle-left"></i> {{ prev_text }} </a>
+            {% endif %}
+        </div>
+        <div class="next">
+            {% if pagination.next %}
+                <a href="{{ pagination.next.link }}"  class="btn btn-primary btn-block btn-fa btn-right">{{ next_text }} <i class="fa fa-angle-right"></i></a>
+            {% endif %}
+        </div>
+    </div>
+</div>

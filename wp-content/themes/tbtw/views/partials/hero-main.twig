@@ -1,0 +1,19 @@
+{% if post.get_thumbnail %}
+    {% set post_hero = post.get_thumbnail.get_src|resize(1500) %}
+{% elseif post_parent %}
+    {% set post_hero = post_parent.get_thumbnail.get_src|resize(1500) %}
+{% endif %}
+
+    <div class="hero-container">
+        <div class="hero hero-height bg-img" style="background-image: url('{{ post_hero }}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h1 class="hero-title">{{ post.title }}</h1>
+                        {{ post.content }}
+                        
+                    </div>
+                </div>
+            </div >
+        </div>
+    </div>

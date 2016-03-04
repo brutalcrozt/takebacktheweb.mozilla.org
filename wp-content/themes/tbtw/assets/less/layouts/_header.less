@@ -1,0 +1,166 @@
+.navbar.container-padding {
+    padding-top: @pad-in-containers-navbar-top;
+    padding-bottom: @pad-in-containers-navbar-bottom;
+}
+
+
+.navbar-toggle {
+  float: left;
+}
+
+
+.navbar-brand {
+    font-family: @font-family-sans-serif;
+    font-weight: normal;
+
+    border: 0;
+    margin-bottom: 0;
+    
+    .nav {
+
+        margin-top: 12px;
+        margin-right: 0;
+
+        > li {
+            > a {
+              line-height: 120%;
+              font-size: 16px;
+              color: #fff;
+              font-weight: 300;
+              font-family: @font-family-sans-serif;
+            
+              @media (min-width: @screen-sm) and (max-width: @screen-md) {
+                  padding-left: 10px;
+                  padding-right: 10px;
+              }
+          }
+            
+        }
+
+
+    }
+}
+
+#global-header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  .navbar-default {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+    // add bottom margin to the element above to compensate for being pinned
+    #connected-top.pinned {/*.pinned*/
+        margin-bottom: 135px;
+    }
+
+    #global-header {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        height: @navbar-height;
+        margin-bottom: @navbar-margin-bottom;
+        
+        .row {
+            max-width: @container-lg;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navbar {
+            background: transparent;
+
+            .nav {
+            }
+        }
+
+        &.pinned {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+
+            // wp admin bar fix
+            body.admin-bar & {
+                top: 30px;
+            }
+        }
+
+        a {
+          display: block;
+          text-align: center;
+        }
+
+        .icon-logo_primary_nav {
+          width: 280px;
+          height: 80px;
+          overflow: hidden;
+          text-indent: -9999px;
+          margin: 0 auto;
+        }
+
+        &.smaller {
+            
+            height: 62px;
+            
+            .icon-logo_primary_nav {
+              width: 140px;
+              height: 40px;
+            }
+            
+            .navbar {
+                padding-top: 0;
+                padding-bottom: 0;
+                height: 50px;
+                min-height: 0px;
+
+                .logo {
+                    margin-top: 5px;
+                    //display: none;
+                    width: 150px;
+                }
+                .nav {
+                    margin-top: 0;
+                    
+                    > li > a {
+                      padding-top: 22px;
+                      padding-bottom: 12px;
+                    }
+                }
+                .btn-donate {
+                    position: relative;
+                    top: 0px;
+                }
+
+                /*.pinned-left {
+                    display: block !important;
+                    visibility: visible !important;
+                    width: 220px;
+                    float: left;
+
+                    .pinned-logo {
+                        //height: 40px;
+                        margin-top: 0px;
+                        position: relative;
+                        top: 8px;
+                        width: 110px;
+                    }
+
+                    .social-nav {
+                        li {
+                            margin-top: 10px;
+                        }
+                        a {
+                            border: none;
+                            width: 40px;
+                        }
+                    }
+                }*/
+
+            }
+        }
+    }
+}
