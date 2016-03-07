@@ -6,52 +6,42 @@
                 <div id="tabzilla">
                     <a href="https://www.mozilla.org/">Mozilla</a>
                 </div>
-                
-                <div class="navbar navbar-default visible-xs">
-                    <button type="button" class="navbar-toggle btn btn-sm btn-danger">
-                        <div class="hamburger">
+
+                <nav class="navbar navbar-default navbar-brand">
+                    <div class="container-fluid">
+
+                        {% if header_menus.get_items|length > 0 %}
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
+                          </button>
                         </div>
-                    </button>
-                </div>
+                        {% endif %}
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                {% for item in header_menus.get_items %}
+                                    <li class="{{ item.get_children ? 'dropdown ' : '' }}{{ item.classes | join(' ') }}">
+                                        <a href="{{ item.get_link }}" class="{{ item.get_children ? 'dropdown-toggle ' : '' }} navbar-link">{{ item.title }}</a>
+                                        {% if item.get_children %}
+                                            <ul class="dropdown-menu" role="menu">
+                                                {% for child in item.get_children %}
+                                                    <li class="{{ item.classes | join(' ') }}"><a href="{{ child.get_link }}" class="navbar-link">{{ child.title }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+
+                    </div><!-- /.container-fluid -->
+
+                </nav>
                 
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  
-                </div>
-
-                {# Desktop Nav #}
-                <div class="navbar navbar-default navbar-brand container-padding hidden-xs">
-
-                    <div class="collapse navbar-collapse">
-
-                        <ul class="nav navbar-nav">
-                            {% for item in header_menus.get_items %}
-                                <li class="{{ item.get_children ? 'dropdown ' : '' }}{{ item.classes | join(' ') }}">
-                                    <a href="{{ item.get_link }}" class="{{ item.get_children ? 'dropdown-toggle ' : '' }} navbar-link
-                                    {{ donate_classes }}">{{ item.title }}</a>
-                                    {% if item.get_children %}
-                                        <ul class="dropdown-menu" role="menu">
-                                            {% for child in item.get_children %}
-                                                <li class="{{ item.classes | join(' ') }}"><a href="{{ child.get_link }}" class="navbar-link">{{ child.title }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        </ul>
-
-                    </div><!-- /.navbar-collapse -->
-                    
-                </div>
-
             </div>
         </div>
     </div>

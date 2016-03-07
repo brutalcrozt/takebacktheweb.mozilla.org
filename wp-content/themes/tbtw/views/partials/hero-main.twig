@@ -5,15 +5,16 @@
 {% endif %}
 
     <div class="hero-container">
-        <div class="hero hero-height bg-img" style="background-image: url('{{ post_hero }}')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <h1 class="hero-title">{{ post.title }}</h1>
-                        {{ post.content }}
-                        
+        <div class="hero bg-img hero-resize" style="background-image: url('{{ post_hero }}')">
+            <div class="hero-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1  col-md-8 col-md-offset-2">
+                          <h1 class="hero-title">{{ post.title }}</h1>
+                          {{ post.content }}
+                        </div>
                     </div>
                 </div>
-            </div >
+            </div>
         </div>
     </div>

@@ -6,4 +6,4 @@ Our mission is to mobilize students to create a world where their lives are free
 
 1. Initialize via composer, `composer install`
 2. Navigate to theme directory `cd wp-content/themes/tbtw`
-3. Install Grunt dependencies, then bower components, then run grunt dev tasks with `npm i`
+3. Run `npm i` to Install dependencies and run Grunt + Bower

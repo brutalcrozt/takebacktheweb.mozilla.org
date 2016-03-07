@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     //'assets/vendor/bootstrap/js/button.js',
     //'assets/vendor/bootstrap/js/modal.js',
     //'assets/vendor/bootstrap/js/tooltip.js',
-    //'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+    'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
     //'assets/js/plugins/jquery.waypoints.js',
     //'assets/js/plugins/jquery.waypoints-sticky.js',
     'assets/js/index.js'
