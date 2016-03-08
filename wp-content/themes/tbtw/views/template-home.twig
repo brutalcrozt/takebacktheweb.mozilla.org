@@ -8,19 +8,19 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col-sm-4">
-                    <span class='img-wrap'><img src="{{ assets_dir }}/img/tmp/feature-1.png" alt="feature 1"></span>
-                    <h4>Behaviour Change</h4>
-                    <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
+                    <span class='img-wrap'><img src="{{ TimberImage( post.feature_1_image ).get_src }}" alt="{{ post.feature_1_headline }}"></span>
+                    <h4>{{ post.feature_1_headline }}</h4>
+                    {{ post.feature_1_message }}
                 </div>
                 <div class="col-sm-4">
-                    <span class='img-wrap'><img src="{{ assets_dir }}/img/tmp/feature-2.png" alt="feature 2"></span>
-                    <h4>Policy Change</h4>
-                    <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
+                    <span class='img-wrap'><img src="{{ TimberImage( post.feature_2_image ).get_src }}" alt="{{ post.feature_2_headline }}"></span>
+                    <h4>{{ post.feature_2_headline }}</h4>
+                    {{ post.feature_2_message }}
                 </div>
                 <div class="col-sm-4">
-                    <span class='img-wrap'><img src="{{ assets_dir }}/img/tmp/feature-3.png" alt="feature 3"></span>
-                    <h4>Technology Innovation</h4>
-                    <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
+                    <span class='img-wrap'><img src="{{ TimberImage( post.feature_3_image ).get_src }}" alt="{{ post.feature_3_headline }}"></span>
+                    <h4>{{ post.feature_3_headline }}</h4>
+                    {{ post.feature_3_message }}
                 </div>
             </div>
         </div>

@@ -20,22 +20,12 @@ img {
 // Background Image
 
 .bg-img {
-    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
     color: #fff;
 
-    //Custom background image heights
-
-    .blog-module & {
-        height: 260px;
-        @media (min-width: @screen-sm) {
-            height: 300px;
-        }
-        @media (min-width: @screen-md) {
-            height: 420px;
-        }
+    @media (min-width: @screen-sm) {
+        background-size: cover;
     }
 
 }
@@ -45,7 +35,7 @@ img {
 
 .container-padding {
     padding-top: @pad-in-containers ;
-    padding-bottom: @pad-in-containers ;
+    padding-bottom: @pad-in-containers;
     @media (min-width: @screen-sm) {
         padding-top: @pad-in-containers-desktop;
         padding-bottom: @pad-in-containers-desktop;

@@ -8,7 +8,6 @@
         "WordPress/WordPress": "*",
         "wpackagist-plugin/advanced-custom-fields": "4.4.5",
         "wpackagist-plugin/advanced-custom-fields-field-snitch": "*",
-        "wpackagist-plugin/acf-pro-sync": "1.0.1",
         "wpackagist-plugin/debug-bar": "0.8.2",
         "wpackagist-plugin/debug-bar-timber": "0.3",
         "wpackagist-plugin/timber-library": "0.22.4",

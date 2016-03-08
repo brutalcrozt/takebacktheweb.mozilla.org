@@ -4,6 +4,9 @@
     //
     include_once("lib/setup/admin-menu.php");
     
+    include_once("lib/setup/fields/home.php");
+    include_once("lib/setup/fields/apply.php");
+    
     //
     // Globals
     //
