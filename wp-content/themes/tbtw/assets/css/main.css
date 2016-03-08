@@ -7140,6 +7140,7 @@ img {
 }
 @media (min-width: 768px) {
   .feature-main .col-sm-4 {
+    max-width: none;
     margin-bottom: 0px;
   }
 }
