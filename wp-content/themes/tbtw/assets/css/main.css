@@ -6902,6 +6902,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+.hero-container .hero h4 a {
+  color: #fff;
+}
 .hero-container .hero p {
   text-align: center;
   color: #ffffff;

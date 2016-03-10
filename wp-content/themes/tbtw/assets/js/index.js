@@ -79,6 +79,50 @@ tbtw.resizeHero = {
 
 
 
+/*  
+ * SCROLL TO ANCHOR
+ */
+
+tbtw.scrollToAnchor = {
+
+  init: function() {
+    $('a.scroll-to[href*=#]:not([href=#])').click(function (e) {
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    
+        var myOffset = $(this).data('offset') || 20,
+          mySpeed = $(this).data('speed') || 600,
+          myEase = $(this).data('ease') || 'swing',
+          myDefault = $(this).data('default') || 'true';
+    
+        if(target.length) {
+      
+          var myTop =  target.offset().top - myOffset;
+          tbtw.scrollToAnchor.scrollTo(myTop, mySpeed, myEase);
+      
+          if(myDefault === 'true') {
+            e.preventDefault();
+          }
+        }
+      }
+    });
+  },
+  
+  scrollTo: function(myTop, mySpeed, myEase) {
+    $('html,body').animate({
+      scrollTop: myTop
+    }, mySpeed, myEase);
+  
+    // stop scrolling on user input
+    $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup scrollstart touchstart touchmove", function() {
+        $('html, body').stop();
+    });
+  }
+
+};
+
+
 // init on document ready
 
 jQuery(document).ready(function() {
@@ -86,6 +130,8 @@ jQuery(document).ready(function() {
   tbtw.respond.init();
   
   tbtw.resizeHero.init();
+  
+  tbtw.scrollToAnchor.init();
   
 });
 
