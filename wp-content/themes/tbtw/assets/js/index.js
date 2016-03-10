@@ -46,7 +46,7 @@ tbtw.resizeHero = {
   
   heroResize: ($('.hero-resize')),
   defaultHeroHeight: 850,
-  mobileHeight: 350,
+  mobileHeight: 450,
   sectionOffset: 3,
   
   init: function() {
@@ -61,7 +61,7 @@ tbtw.resizeHero = {
   setHero: function() {
     var h = 380;
     if(tbtw.mobile) {
-      tbtw.resizeHero.heroResize.css({'height': (h+'px'), 'min-height': (h+'px')});
+      tbtw.resizeHero.heroResize.css({'height': '', 'min-height': ''});
     } else {
       h = $(window).height() - tbtw.resizeHero.sectionOffset;
       if(h <= tbtw.resizeHero.mobileHeight) {
