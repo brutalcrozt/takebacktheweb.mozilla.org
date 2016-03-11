@@ -25,10 +25,10 @@
             "package": {
                 "name": "WordPress/WordPress",
                 "type": "webroot",
-                "version": "4.2.1",
+                "version": "4.4.2",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/WordPress/WordPress/archive/4.2.1.zip"
+                    "url": "https://github.com/WordPress/WordPress/archive/4.4.2.zip"
                 },
                 "require": {
                     "fancyguy/webroot-installer": "~1.1"
@@ -51,6 +51,7 @@
             "rm -rf wp/wp-config-sample.php",
             "rm -rf wp/wp-content/plugins/hello.php",
             "cp -R wp/* .",
+            "rm -Rf wp",
 
             "mkdir -p wp-content/uploads && chmod -R 777 wp-content/uploads",
             "mkdir -p wp-content/themes/tbtw/acf-json && chmod -R 777 wp-content/themes/tbtw/acf-json"

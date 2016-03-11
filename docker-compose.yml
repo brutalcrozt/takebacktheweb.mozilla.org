@@ -8,9 +8,9 @@ web:
      - "127.0.0.3:8080:80"
     working_dir: /var/www/html
     volumes:
-     - wordpress:/var/www/html/wp-content
+     - ./code/wp-content:/var/www/html/wp-content
 mysql:
-    image: mysql:5.7
+    image: mysql
     environment:
      - MYSQL_ROOT_PASSWORD=password
      - MYSQL_DATABASE=wordpress
