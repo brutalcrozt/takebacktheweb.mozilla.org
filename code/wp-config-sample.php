@@ -27,10 +27,10 @@ else:
   
     # Production configs
     // Database Connection
-    define('DB_NAME', $_ENV["MYSQL_DATABASE"]);
-    define('DB_USER', $_ENV["WORDPRESS_DB_USER"]);
-    define('DB_PASSWORD', $_ENV["WORDPRESS_DB_PASSWORD"]);
-    define('DB_HOST', $_ENV["WORDPRESS_HOST"]);
+    define('DB_NAME', getenv('DB_NAME'));
+    define('DB_USER', getenv('DB_USER'));
+    define('DB_PASSWORD', getenv('DB_PASSWORD'));
+    define('DB_HOST', getenv('DB_HOST'));
 
     // Wordpress Settings
     define('WP_DEBUG', false);
